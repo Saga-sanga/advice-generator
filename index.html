@@ -8,23 +8,33 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+  <link href="./dist/output.css" rel="stylesheet">
   
   <title>Frontend Mentor | Advice generator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution {font-family: 'Manrope', sans-serif; font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    #random-advice-button:hover, #random-advice-button:focus { box-shadow: 0px 0px 20px 0px hsl(150deg 100% 66%);}
   </style>
 </head>
-<body>
-  <main>
-    Advice #<!-- Advice ID goes here -->
-  
-    "<!-- Advice text goes here -->"
+<body class="bg-dark-blue">
+  <main class="font-sans text-center min-h-screen flex justify-center items-center">
+    <article class="bg-dark-grayish-blue m-4 mb-40 flex flex-col items-center px-7 py-9 relative rounded-xl max-w-lg">
+      <h3 class="text-neon-green text-[14px] tracking-[0.25rem] pb-5">ADVICE #<span id="advice-id"></span></h3><!-- Advice ID goes here -->
+      <p id="advice-text" class="text-light-cyan text-[28px] pb-5"></p><!-- Advice text goes here -->
+      <picture>
+        <source media="(min-width: 640px)" srcset="./images/pattern-divider-desktop.svg">
+        <img class="mb-7" src="./images/pattern-divider-mobile.svg" alt="light cyan colored horizontal divider">
+      </picture>
+      <button id="random-advice-button" class="p-5 rounded-full bg-neon-green absolute bottom-[-30px]">
+        <img src="./images/icon-dice.svg" alt="Neon colored dice icon">
+      </button>
+    </article>
   </main>
   
-  <footer class="attribution">
+  <footer class="attribution absolute w-full bottom-0 text-light-cyan">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a target="_blank" href="https://github.com/Saga-sanga">Reckson Khiangte</a>.
   </footer>
