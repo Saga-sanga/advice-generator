@@ -15,8 +15,7 @@ async function fetchQuote() {
   adviceID.innerHTML = data.slip.id;
   adviceQuote.innerHTML = `"${data.slip.advice}"`;
 
-  // console.log(data.slip);
-  return data;
+  // return data;
 }
 
 fetchQuote();
